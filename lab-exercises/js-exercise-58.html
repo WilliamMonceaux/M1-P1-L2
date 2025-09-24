@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>page title</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header><h1 id="header">Header</h1></header> 
+    <section>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Articles</a></li>
+          <li><a href="#">Reviews</a></li>
+          <li><a href="#">Rocks</a></li>
+          <li><a href="#">Shoes</a></li>
+          <li><a href="#">Backpacks</a></li>
+        </ul>
+      </nav>
+      <article>
+        <h2>Article heading</h2>
+        <p>Paragraph...</p>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIb-rw734FHM5Hht27PEJPimuDw7Sf2-8sNg&s" 
+        alt="Backpack shark">
+        <a href="https://www.google.com/">More information...</a>
+      </article>
+      <aside id="aside">
+        <h2>Related</h2>
+        <ul>
+          <li><a href="#">Article 1</a></li>
+          <li><a href="#">Article 2</a></li>
+        </ul>
+      </aside>
+    </section>
+    <section>
+        <form onsubmit="order(event)">
+            <label for="street">Street:</label>
+            <input id="street" type="text" />
+           
+            <label for="city">City:</label>
+            <input id="city" type="text" />
+
+            <label for="state">State:</label>
+            <input id="state" type="text" />
+
+            <label for="zip">Zip Code:</label>
+            <input id="zip" type="number" min="10000" max="99999"/>
+            
+            <button type="submit">Order Now</button>
+        </form>
+    </section>
+    <footer>
+      <p>@copyright 2050 by nobody. all rights reversed</p>
+    </footer>
+    <script>
+      document.getElementById("header").innerText = "Hello, JavaScript!!!";
+      ("Hello JavaScript");
+      document.getElementById("aside").style.backgroundColor = "lime";
+      ("green");
+
+      function order(event) {
+        // Prevent page refresh which is default behavior ofter SUBMIT event
+        event.preventDefault();
+        alert('Order processing...');
+        console.log('page does not refresh');
+      }
+    </script>
+  </body>
+</html>
